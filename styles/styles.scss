@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+.card-container {
+  display: flex;
+  height: 500px;
+  max-width: 800px;
+  gap: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px lightgray;
+  margin: 50px auto;
+  @media (max-width: 768px) {
+    width: 350px;
+    min-width: 350px;
+    height: fit-content;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px auto;
+  }
+  &__img {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      &.desktop-img {
+        display: block;
+        border-radius: 10px 0 0 10px;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      &.mobile-img {
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+          border-radius: 10px 10px 0 0;
+        }
+      }
+    }
+  }
+  &__details {
+    width: 50%;
+    background-color: var(--white);
+    padding: 40px 40px 40px 0;
+    border-radius: 0 10px 10px 0;
+    @media (max-width: 768px) {
+      padding: 20px 20px 20px;
+      width: 100%;
+    }
+    .product-type {
+      text-transform: uppercase;
+      color: var(--dark-grayish-blue);
+      font-weight: 300;
+      letter-spacing: 3px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .product-name {
+      font-size: 36px;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      width: 80%;
+      margin-bottom: 0;
+      @media (max-width: 768px) {
+        font-size: 32px;
+        width: 100%;
+      }
+    }
+    .product-desc {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--dark-grayish-blue);
+      margin: 20px 0 30px;
+    }
+    .product-price {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      span {
+        font-size: 40px;
+        color: var(--dark-cyan);
+        font-family: "Fraunces", serif;
+        @media (max-width: 768px) {
+          font-size: 36px;
+        }
+      }
+      del {
+        font-size: 16px;
+        color: var(--dark-grayish-blue);
+        font-weight: 500;
+      }
+    }
+    .add-to-cart-btn {
+      width: 100%;
+      background-color: var(--dark-cyan);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        padding: 15px;
+        font-size: 14px;
+        img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+      &:hover {
+        background-color: hsl(158, 36%, 37%, 90%);
+      }
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
