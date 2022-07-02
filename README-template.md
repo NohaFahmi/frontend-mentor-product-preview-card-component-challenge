@@ -35,5 +35,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/product-preview-card-component-solution-with-pure-html-and-css-poaF_3PiBm)
+- Live Site URL: [live-site](https://product-preview-component-fm.netlify.app/)
